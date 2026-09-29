@@ -6,6 +6,12 @@ namespace Program
 {
     public class Szerviz
     {
+        List<Jarmu> jarmuvek = new List<Jarmu>();
+
+        public void JarmuFelvetele(Jarmu jarmu)
+        {
+
+        }
 
     }
 }

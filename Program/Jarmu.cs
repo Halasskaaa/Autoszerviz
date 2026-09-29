@@ -11,7 +11,6 @@ namespace Program
         private int kor;
         private int kilometerOra;
         private int uzemanyagSzint;
-        private bool szervizSzukseges;
 
         public Jarmu(string rendszam, int kor, int kilometerOra, int uzemanyagSzint)
         {
@@ -71,6 +70,10 @@ namespace Program
                 {
                     kilometerOra = 0;
                 }
+                else
+                {
+                    kilometerOra = value;
+                }
             }
         }
         public int UzemanyagSzint {
@@ -96,20 +99,9 @@ namespace Program
         }
         public bool SzervizSzukseges { 
             get 
-            { 
-                return szervizSzukseges; 
-            }            
-            set
             {
-                if (kilometerOra >= 200000)
-                {
-                    szervizSzukseges = true;
-                }
-                else
-                {
-                    szervizSzukseges = false;
-                }
-            }
+                return kilometerOra >= 200000;
+            }  
         }
 
         public virtual void InformaciotAd()
@@ -122,9 +114,9 @@ namespace Program
             if (dij > 100000)
             {
                 kilometerOra -= 10000;
-                uzemanyagSzint -= 10;
-                Console.WriteLine("A jármű szervízelése megtörtént.");
             }
+            UzemanyagSzint -= 10;
+            Console.WriteLine("A jármű szervízelése megtörtént.");
         }
     }
 }

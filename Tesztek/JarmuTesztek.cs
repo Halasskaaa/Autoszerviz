@@ -109,42 +109,42 @@ namespace Tesztek
         //// TeherAuto tesztek
         //// -------------------------
 
-        //[Test]
-        //public void TeherAuto_Rakomany_KezdetiErtekHelyes()
-        //{
-        //    TeherAuto auto = new TeherAuto("TR-123", 8, 150000, 60, 15);
+        [Test]
+        public void TeherAuto_Rakomany_KezdetiErtekHelyes()
+        {
+            TeherAuto auto = new TeherAuto("TR-123", 8, 150000, 60, 15);
 
-        //    Assert.That(auto.Rakomany, Is.EqualTo(15));
-        //}
+            Assert.That(auto.Rakomany, Is.EqualTo(15));
+        }
 
-        //[Test]
-        //public void TeherAuto_Szervizel_SzervizElottLeuritiARakomanyt()
-        //{
-        //    TeherAuto auto = new TeherAuto("TR-123", 8, 200000, 60, 15);
+        [Test]
+        public void TeherAuto_Szervizel_SzervizElottLeuritiARakomanyt()
+        {
+            TeherAuto auto = new TeherAuto("TR-123", 8, 200000, 60, 15);
 
-        //    auto.Szervizel(150000);
+            auto.Szervizel(150000);
 
-        //    Assert.That(auto.Rakomany, Is.EqualTo(0));
-        //}
+            Assert.That(auto.Rakomany, Is.EqualTo(0));
+        }
 
-        //[Test]
-        //public void TeherAuto_Szervizel_AzAlaposztalySzervizeleseIsLefut()
-        //{
-        //    TeherAuto auto = new TeherAuto("TR-123", 8, 200000, 60, 15);
+        [Test]
+        public void TeherAuto_Szervizel_AzAlaposztalySzervizeleseIsLefut()
+        {
+            TeherAuto auto = new TeherAuto("TR-123", 8, 200000, 60, 15);
 
-        //    auto.Szervizel(150000);
+            auto.Szervizel(150000);
 
-        //    Assert.That(auto.KilometerOra, Is.EqualTo(190000));
-        //    Assert.That(auto.UzemanyagSzint, Is.EqualTo(50));
-        //}
+            Assert.That(auto.KilometerOra, Is.EqualTo(190000));
+            Assert.That(auto.UzemanyagSzint, Is.EqualTo(50));
+        }
 
-        //[Test]
-        //public void TeherAuto_Rakomany_20Felett_20Lesz()
-        //{
-        //    TeherAuto auto = new TeherAuto("TR-123", 8, 150000, 60, 25);
+        [Test]
+        public void TeherAuto_Rakomany_20Felett_20Lesz()
+        {
+            TeherAuto auto = new TeherAuto("TR-123", 8, 150000, 60, 25);
 
-        //    Assert.That(auto.Rakomany, Is.EqualTo(20));
-        //}
+            Assert.That(auto.Rakomany, Is.EqualTo(20));
+        }
 
         //// -------------------------
         //// Szerviz tesztek
