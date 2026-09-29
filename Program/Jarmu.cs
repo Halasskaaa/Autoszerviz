@@ -101,7 +101,7 @@ namespace Program
             }            
             set
             {
-                if (kilometerOra > 200000)
+                if (kilometerOra >= 200000)
                 {
                     szervizSzukseges = true;
                 }
@@ -123,7 +123,7 @@ namespace Program
             {
                 kilometerOra -= 10000;
                 uzemanyagSzint -= 10;
-                Console.WriteLine("A jármű szhervízelése megtörtént.");
+                Console.WriteLine("A jármű szervízelése megtörtént.");
             }
         }
     }

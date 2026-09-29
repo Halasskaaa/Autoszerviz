@@ -17,51 +17,51 @@ namespace Tesztek
             Assert.That(jarmu.Rendszam, Is.EqualTo("ISMERETLEN"));
         }
 
-        //[Test]
-        //public void Jarmu_Ertekek_KorlatokKozottMaradnak()
-        //{
-        //    Jarmu jarmu = new Jarmu("ABC-123", -5, -100, 150);
+        [Test]
+        public void Jarmu_Ertekek_KorlatokKozottMaradnak()
+        {
+            Jarmu jarmu = new Jarmu("ABC-123", -5, -100, 150);
 
-        //    Assert.That(jarmu.Kor, Is.EqualTo(0));
-        //    Assert.That(jarmu.KilometerOra, Is.EqualTo(0));
-        //    Assert.That(jarmu.UzemanyagSzint, Is.EqualTo(100));
-        //}
+            Assert.That(jarmu.Kor, Is.EqualTo(0));
+            Assert.That(jarmu.KilometerOra, Is.EqualTo(0));
+            Assert.That(jarmu.UzemanyagSzint, Is.EqualTo(100));
+        }
 
-        //[Test]
-        //public void Jarmu_SzervizSzukseges_200000KmTol()
-        //{
-        //    Jarmu jarmu = new Jarmu("ABC-123", 5, 200000, 50);
+        [Test]
+        public void Jarmu_SzervizSzukseges_200000KmTol()
+        {
+            Jarmu jarmu = new Jarmu("ABC-123", 5, 200000, 50);
 
-        //    Assert.That(jarmu.SzervizSzukseges, Is.True);
-        //}
+            Assert.That(jarmu.SzervizSzukseges, Is.True);
+        }
 
-        //[Test]
-        //public void Jarmu_SzervizNemSzukseges_200000KmAlatt()
-        //{
-        //    Jarmu jarmu = new Jarmu("ABC-123", 5, 199999, 50);
+        [Test]
+        public void Jarmu_SzervizNemSzukseges_200000KmAlatt()
+        {
+            Jarmu jarmu = new Jarmu("ABC-123", 5, 199999, 50);
 
-        //    Assert.That(jarmu.SzervizSzukseges, Is.False);
-        //}
+            Assert.That(jarmu.SzervizSzukseges, Is.False);
+        }
 
-        //[Test]
-        //public void Jarmu_Szervizel_100000FelettiDijEsetenCsokkenAKilometer()
-        //{
-        //    Jarmu jarmu = new Jarmu("ABC-123", 5, 200000, 50);
+        [Test]
+        public void Jarmu_Szervizel_100000FelettiDijEsetenCsokkenAKilometer()
+        {
+            Jarmu jarmu = new Jarmu("ABC-123", 5, 200000, 50);
 
-        //    jarmu.Szervizel(150000);
+            jarmu.Szervizel(150000);
 
-        //    Assert.That(jarmu.KilometerOra, Is.EqualTo(190000));
-        //}
+            Assert.That(jarmu.KilometerOra, Is.EqualTo(190000));
+        }
 
-        //[Test]
-        //public void Jarmu_Szervizel_CsokkentiAzUzemanyagszintet()
-        //{
-        //    Jarmu jarmu = new Jarmu("ABC-123", 5, 200000, 50);
+        [Test]
+        public void Jarmu_Szervizel_CsokkentiAzUzemanyagszintet()
+        {
+            Jarmu jarmu = new Jarmu("ABC-123", 5, 200000, 50);
 
-        //    jarmu.Szervizel(50000);
+            jarmu.Szervizel(50000);
 
-        //    Assert.That(jarmu.UzemanyagSzint, Is.EqualTo(40));
-        //}
+            Assert.That(jarmu.UzemanyagSzint, Is.EqualTo(40));
+        }
 
 
         //// -------------------------
