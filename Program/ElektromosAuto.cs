@@ -8,10 +8,9 @@ namespace Program
     {
         private int akkumulatorSzint;
 
-        public ElektromosAuto(string rendszam, int kor, int kilometerOra, int akkumulatorSzint, int uzemanyagSzint) : base (rendszam, kor, kilometerOra, uzemanyagSzint)
+        public ElektromosAuto(string rendszam, int kor, int kilometerOra, int akkumulatorSzint) : base (rendszam, kor, kilometerOra, 0)
         {
             AkkumulatorSzint = akkumulatorSzint;
-            uzemanyagSzint = 0;
         }
 
         public int AkkumulatorSzint { 
