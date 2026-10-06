@@ -7,10 +7,12 @@ namespace Program
     public class ExtraJarmu : Jarmu
     {
         private int bioUzemanyagSzint;
+        private int karcolasok;
 
-        public ExtraJarmu(string rendszam, int kor, int kilometerOra, int bioUzemanyagSzint) : base(rendszam, kor, kilometerOra, 0)
+        public ExtraJarmu(string rendszam, int kor, int kilometerOra, int bioUzemanyagSzint, int karcolasok) : base(rendszam, kor, kilometerOra, 0)
         {
             BioUzemanyagSzint = bioUzemanyagSzint;
+            Karcolasok = karcolasok;
         }
 
         public int BioUzemanyagSzint
@@ -35,6 +37,28 @@ namespace Program
                 }
             }
         }
+        public int Karcolasok
+        {
+            get
+            {
+                return karcolasok;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    karcolasok = 0;
+                }
+                else if (value > 30)
+                {
+                    karcolasok = 30;
+                }
+                else
+                {
+                    karcolasok = value;
+                }
+            }
+        }
         public override void InformaciotAd()
         {
             Console.WriteLine($"{Rendszam} - {Kor} éves extra jármű, {KilometerOra} km - rel, {BioUzemanyagSzint} % bio üzemanyaggal.");
@@ -47,6 +71,7 @@ namespace Program
                 KilometerOra -= 10000;
             }
             bioUzemanyagSzint += 20;
+            karcolasok -= 10;
             Console.WriteLine("A jármű szervízelése megtörtént.");
         }
 
