@@ -208,7 +208,7 @@ namespace Tesztek
         [Test]
         public void ExtraJarmu_UzemanyagSzint_MindigNulla()
         {
-            ExtraJarmu auto = new ExtraJarmu("EV-123", 3, 100000, 80, 30);
+            ExtraJarmu auto = new ExtraJarmu("EX-123", 3, 100000, 80, 30);
 
             Assert.That(auto.UzemanyagSzint, Is.EqualTo(0));
         }
@@ -216,7 +216,7 @@ namespace Tesztek
         [Test]
         public void ExtraJarmu_BioUzemanyagSzint_KorlatokKozottMarad()
         {
-            ExtraJarmu auto = new ExtraJarmu("EV-123", 3, 100000, 150, 10);
+            ExtraJarmu auto = new ExtraJarmu("EX-123", 3, 100000, 150, 10);
 
             Assert.That(auto.BioUzemanyagSzint, Is.EqualTo(100));
         }
@@ -224,7 +224,7 @@ namespace Tesztek
         [Test]
         public void ExtraJarmu_Szervizel_NoveliABioUzemanyagSzintet()
         {
-            ExtraJarmu auto = new ExtraJarmu("EV-123", 3, 200000, 50, 25);
+            ExtraJarmu auto = new ExtraJarmu("EX-123", 3, 200000, 50, 25);
 
             auto.Szervizel(50000);
 
@@ -234,7 +234,7 @@ namespace Tesztek
         [Test]
         public void ExtraJarmu_Szervizel_100000FelettiDijEsetenCsokkenAKilometer()
         {
-            ExtraJarmu auto = new ExtraJarmu("EV-123", 3, 200000, 50, 15);
+            ExtraJarmu auto = new ExtraJarmu("EX-123", 3, 200000, 50, 15);
 
             auto.Szervizel(150000);
 
@@ -244,7 +244,7 @@ namespace Tesztek
         [Test]
         public void ExtraJarmu_Karcolasok_KorlatokKozottMarad()
         {
-            TeherAuto auto = new TeherAuto("TR-123", 8, 150000, 60, 40);
+            ExtraJarmu auto = new ExtraJarmu("EX-123", 3, 200000, 50, 40);
 
             Assert.That(auto.Rakomany, Is.EqualTo(30));
         }
