@@ -246,7 +246,7 @@ namespace Tesztek
         {
             ExtraJarmu auto = new ExtraJarmu("EX-123", 3, 200000, 50, 40);
 
-            Assert.That(auto.Rakomany, Is.EqualTo(30));
+            Assert.That(auto.Karcolasok, Is.EqualTo(30));
         }
     }
 }
