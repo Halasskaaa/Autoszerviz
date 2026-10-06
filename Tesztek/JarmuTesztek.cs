@@ -199,5 +199,46 @@ namespace Tesztek
             Assert.That(auto.KilometerOra, Is.EqualTo(190000));
             Assert.That(auto.AkkumulatorSzint, Is.EqualTo(70));
         }
+
+
+        //// -------------------------
+        //// ExtraJarmu tesztek
+        //// -------------------------
+
+        [Test]
+        public void ExtraJarmu_UzemanyagSzint_MindigNulla()
+        {
+            ExtraJarmu auto = new ExtraJarmu("EV-123", 3, 100000, 80);
+
+            Assert.That(auto.UzemanyagSzint, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void ExtraJarmu_BioUzemanyagSzint_KorlatokKozottMarad()
+        {
+            ExtraJarmu auto = new ExtraJarmu("EV-123", 3, 100000, 150);
+
+            Assert.That(auto.BioUzemanyagSzint, Is.EqualTo(100));
+        }
+
+        [Test]
+        public void ExtraJarmu_Szervizel_NoveliABioUzemanyagSzintet()
+        {
+            ExtraJarmu auto = new ExtraJarmu("EV-123", 3, 200000, 50);
+
+            auto.Szervizel(50000);
+
+            Assert.That(auto.BioUzemanyagSzint, Is.EqualTo(70));
+        }
+
+        [Test]
+        public void ExtraJarmu_Szervizel_100000FelettiDijEsetenCsokkenAKilometer()
+        {
+            ExtraJarmu auto = new ExtraJarmu("EV-123", 3, 200000, 50);
+
+            auto.Szervizel(150000);
+
+            Assert.That(auto.KilometerOra, Is.EqualTo(190000));
+        }
     }
 }
